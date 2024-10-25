@@ -29,7 +29,38 @@ instructions](https://docs.modular.com/mojo/manual/get-started).
 curl -ssL https://magic.modular.com/4d9228ea-daf9-440c-ab17-76018455e050 | bash
 ```
 
-Init the project:
+Of course, clone down the repo:
+
+```bash
+git clone https://github.com/flow-state-15/Mojo-intro.git
+```
+
+Remember to create a new branch! I welcome any PRs.
+
+Next you'll want to install dependencies and open a shell environment for the
+project:
+
+```bash
+magic install && magic shell
+```
+
+Some files may need separate modules installed. Magic is designed to handle
+Python and Mojo dependencies together. Ex:
+
+```bash
+magic add matplotlib numpy
+```
+
+To run both python and mojo files for comparisons (you'll need Python
+installed), `cd` into the directory and try combining the commands:
+
+```bash
+python3 hello.py && mojo hello.mojo
+```
+
+To exit the venv, use `exit`.
+
+### To init a new project
 
 ```py
 magic init mojo-intro --format mojoproject
@@ -45,12 +76,6 @@ the MAX framework does make sense here.
 To run a file, use the familiar syntax `mojo <filename.mojo>`. This method uses
 JIT compilation which is slightly slower than compiling directly to binary. To compile
 Ahead Of Time, use `mojo build <filename>.mojo`.
-
-To run both python and mojo files for comparisons (you'll need Python installed), try combining the commands:
-
-```bash
-python3 hello.py && mojo hello.mojo
-```
 
 I'll keep building out this repo since Mojo seems to be a fun advancement in our
 industry. Feel free to clone and contribute your own findings!
